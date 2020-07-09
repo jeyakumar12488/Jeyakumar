@@ -28,9 +28,6 @@ public class RestAPI {
 	{
 		callGetAllUsersAPI();
 		callGetUserByIdAPI();
-		/*
-		 * callCreateUserAPI(); callUpdateUserByIdAPI();
-		 */
 		callDeleteUserByIdAPI();
 	}
 	
@@ -58,19 +55,7 @@ public class RestAPI {
 		System.out.println(user.getEmail());
 	} 
 
-	/*
-	 * private static void callCreateUserAPI() { RestAPIUser user = new
-	 * RestAPIUser("Raj","Kumar","raj@gmail.com"); ResponseEntity<RestAPIUser> user2
-	 * = restTemplate.postForEntity(CREATE_USER_API, user, RestAPIUser.class);
-	 * //(CREATE_USER_API, user, User.class); System.out.println(user2.getBody()); }
-	 * 
-	 * private static void callUpdateUserByIdAPI() { Map<String, Integer> param =
-	 * new HashMap<>(); param.put("id", 6); RestAPIUser updateUser = new
-	 * RestAPIUser("anji","Kumar","kumar@gmail.com");
-	 * restTemplate.put(UPDATE_USER_API, updateUser,param); //(CREATE_USER_API,
-	 * user, User.class); }
-	 */
-	private static void callDeleteUserByIdAPI()
+	static void callDeleteUserByIdAPI()
 	{
 		Map<String, Integer> param = new HashMap<>();
 		param.put("id", 7);

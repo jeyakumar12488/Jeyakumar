@@ -79,5 +79,6 @@ public class RestAPIUserController {
 
 		this.repository.delete(existingUser);
 		return ResponseEntity.ok().build();
+		
 	}
 }
