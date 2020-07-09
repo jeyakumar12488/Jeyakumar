@@ -53,9 +53,9 @@ public class RestAPIUserController {
 		List<RestAPIUser> validUser = repository.validateUser(user.getEmail());
 		if (CollectionUtils.isEmpty(validUser)) {
 			this.repository.save(user);
-			return new ResponseEntity<>("success", HttpStatus.OK);
+			return new ResponseEntity<>("New User created successfully", HttpStatus.OK);
 		} else {
-			String errorMsg = "User Already Exist";
+			String errorMsg = "User Already Exists please change emailaddress";
 			return new ResponseEntity<>(errorMsg, HttpStatus.OK);
 		}
 

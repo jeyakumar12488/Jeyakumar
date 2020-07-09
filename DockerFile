@@ -1,0 +1,4 @@
+FROM openjdk:8
+EXPOSE 8080
+ADD target/Billennium Interview Task.jar Billennium Interview Task.jar
+ENTRYPOINT ["java","-jar","/Billennium Interview Task.jar"]
